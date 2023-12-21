@@ -49,14 +49,12 @@ const initialState: ArtistsState = {
           draftState.status = Statuses.Loading;
         })
       })
-      
       .addCase(fetchArtistsAsync.fulfilled, (state) => {
         return produce(state, (draftState) => {
           draftState.status = Statuses.UpToDate;
         })
       })
-
-      .addCase(fetchArtistsAsync.pending, (state) => {
+      .addCase(fetchArtistsAsync.rejected, (state) => {
         return produce(state, (draftState) => {
           draftState.status = Statuses.Error;
         })
