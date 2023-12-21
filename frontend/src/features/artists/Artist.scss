@@ -1,0 +1,12 @@
+.searchField {
+  input {
+    background-color: black;
+    color: white;
+  }
+  label {
+    color: white;
+    &.Mui-focused {
+      color: white;
+    }
+  }
+}
