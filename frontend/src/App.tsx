@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Artists from './features/artists/Artists'
 
 function App() {

@@ -4,6 +4,7 @@ import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { Statuses, fetchArtistsAsync, selectArtists, selectStatus } from './artistSlice';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import './Artist.scss';
 
 function Artists() {
   const artists = useAppSelector(selectArtists);
@@ -39,10 +40,11 @@ function Artists() {
       >
         <div>
         <TextField
+            className="searchField"
             id="filled-search"
             label="Artist Name"
             type="search"
-            variant="filled"
+            variant="outlined"
           />
         </div>
       
