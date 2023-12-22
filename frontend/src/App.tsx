@@ -1,10 +1,15 @@
 import './App.scss';
-import Artists from './features/artists/Artists'
+import Searchbar from './components/Searchbar/Searchbar'
 
 function App() {
   return (
-    <div className="App container">
-      <Artists />
+    <div className="App">
+      <div className="App logo">
+        <h1>Surround.me</h1>
+      </div>
+      <div className="App container">
+        <Searchbar />
+      </div>
     </div>
   );
 }
