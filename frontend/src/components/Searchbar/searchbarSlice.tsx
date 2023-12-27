@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import produce from "immer";
 import { RootState } from "../../app/store";
-import { fetchArtists } from './artistAPI'
+import { fetchArtists } from './searchbarAPI'
 
 export enum Statuses {
     Initial = "Not fetched",
@@ -38,7 +38,7 @@ const initialState: ArtistsState = {
     return response;
   } )
 
- export const artistSlice = createSlice({
+ export const searchbarSlice = createSlice({
   name: "artists",
   initialState,
   reducers: {},
@@ -62,10 +62,10 @@ const initialState: ArtistsState = {
   }
  })
 
- const {} = artistSlice.actions;
+ const {} = searchbarSlice.actions;
 
  export const selectArtists = (state: RootState) => state.artists.artists;
 
  export const selectStatus = (state: RootState) => state.artists.status;
 
- export default artistSlice.reducer;
+ export default searchbarSlice.reducer;

@@ -1,12 +1,16 @@
 import * as React from 'react';
 import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { Statuses, fetchArtistsAsync, selectArtists, selectStatus } from './artistSlice';
+import { Statuses, fetchArtistsAsync, selectArtists, selectStatus } from './searchbarSlice';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import './Artist.scss';
+import './Searchbar.scss';
 
-function Artists() {
+interface Props {
+  
+}
+ 
+const Searchbar: React.FC<Props> = () => {
   const artists = useAppSelector(selectArtists);
   const status = useAppSelector(selectStatus);
   const dispatch = useAppDispatch();
@@ -28,7 +32,7 @@ function Artists() {
   }
 
   return (
-    <div><h1>Artists</h1>
+    <div><h3>Artists</h3>
       {contents}
       <Box
         component="form"
@@ -52,5 +56,5 @@ function Artists() {
     </div>
   )
 }
-
-export default Artists
+ 
+export default Searchbar;

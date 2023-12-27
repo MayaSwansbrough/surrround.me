@@ -1,4 +1,4 @@
-import { ArtistsState } from "./artistSlice"
+import { ArtistsState } from "./searchbarSlice"
 
 const API_URL = "http://localhost:3000";
 

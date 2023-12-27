@@ -1,3 +1,10 @@
-root {
-  background-image: url('../public/bg.png');
+@import '../public/fonts/fonts.scss';
+
+h1 {
+  color: #020D41;
+  font-family: Syne;
+  font-size: 8rem;
+  margin: auto;
+  text-align: center;
+  text-shadow: 0 0 1rem white, 0 0 0.8rem #E6A47B;
 }
